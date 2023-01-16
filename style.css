@@ -1,0 +1,165 @@
+@import url(icons.css);
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+--Soft-Pink: hsl(333, 80%, 67%);
+
+--Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+--Light-Grayish-Magenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%);
+/**/
+--ff:'League Spartan', sans-serif;
+--fw-400:400;
+--fw-500:500;
+--fw-700:700;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+p{
+    color:var(--Light-Grayish-Magenta);
+    font-weight: var(--fw-400);
+    line-height: 1.5;
+    font-size: 11px;
+}
+body{
+font-family: var(--ff);
+font-size: 15px;
+min-height: 100vh;
+display: grid;
+place-content: center;
+background-image: url(images/bg-pattern-top-desktop.svg)
+,url(images/bg-pattern-bottom-desktop.svg);
+background-repeat: no-repeat,no-repeat;
+background-position: right 50vw bottom 50vh, left 5vw ;
+
+}
+.main-box{
+    display: grid;
+    grid: auto/ 1fr 1fr;
+    place-content: center;
+    max-width: 801px;
+    gap: 40px; 
+}
+/*left*/
+.left{
+gap: 10px;
+}
+.title{
+    color: var(--Very-Dark-Magenta);
+    padding-right: 124px;
+    font-size: 40px;
+}
+.title-disc{
+    color: var(--Dark-Grayish-Magenta);
+    font-size: 15px;
+    margin-top: 20px;
+}
+/*right*/
+.right{
+display: flex;
+flex-direction: column;
+gap: 15px;
+align-items: self-end;
+margin-top: 16px;
+}
+
+.icon-icon-star{
+  padding: 13px 15px ;
+  background-color: var(--Light-Grayish-Magenta);
+  width: 84%;
+  font-size: 13px;
+  border-radius: 7px;
+}
+.icon-icon-star:nth-child(1){
+    margin-right: 60px;
+}
+.icon-icon-star:nth-child(2){
+    margin-right: 30px;
+}
+.stars-names{
+    font-family: var(--ff);
+    font-weight: var(--fw-700);
+    color: var(--Very-Dark-Magenta);
+}
+/*bottom*/
+.bottom{
+    grid-column:span 2 ;
+    display: flex; 
+    gap: 25px;
+}
+.boxes{
+    background-color: var(--Very-Dark-Magenta); 
+    padding: 30px;
+    border-radius: 7px;
+}
+.images{
+    border-radius: 100%;
+    width: 13%;
+}
+.name{
+color: white;
+font-weight: var(--fw-700);
+}
+.disc{
+margin-bottom: 18px;
+color: var(--Soft-Pink);
+}
+.boxes:nth-child(2){
+    position:relative;
+    top: 20px;
+    
+}
+.boxes:nth-child(3){
+    position:relative;
+    top: 40px;
+}
+.flex-group{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+@media(max-width:600px){
+    body{
+        padding: 120px 20px;
+    }
+    .boxes{
+        width: 100%;
+        padding: 20px;
+        margin-bottom: -10px;
+    }
+    .main-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        text-align: center;
+        
+    }
+    .title{
+        padding-right: 0px;
+        width: 264px;
+        text-align: center;
+    }
+    .bottom{
+        display: grid;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .icon-icon-star{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+gap: 10px;
+    }
+    .icon-icon-star:nth-child(2),.icon-icon-star:nth-child(1)  {
+        margin-right: 0px;
+    }
+    .icon-icon-star:before {
+        margin-right: 0px;
+      }
+   
+}
